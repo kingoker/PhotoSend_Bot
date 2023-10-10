@@ -25,9 +25,9 @@ async def send_photo():
     if tasks != []:
         for task in tasks:
             image = FSInputFile('media/' + str(task.image))
-            await bot.send_photo(-1001971360352, image)
+            await bot.send_photo(-1001949060344, image)
             image = FSInputFile('media/'+ str(task.image))
-            await bot.send_document(-1001971360352, image)
+            await bot.send_document(-1001949060344, image)
 
 
 

@@ -4,4 +4,9 @@ from bot.models import TaskManager
 
 # Register your models here.
 
-admin.site.register(TaskManager)
+
+class TaskManagerAdmin(admin.ModelAdmin):
+    list_display = ('id', 'task_date', 'task_time', 'published')
+    list_filter = ('id', 'task_date', 'task_time', 'published')
+
+admin.site.register(TaskManager,TaskManagerAdmin)
